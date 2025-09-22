@@ -59,11 +59,11 @@ const onLogin = async () => {
     window.alert("Login failed");
   }
 };
-if (session) {
+ if (session) {
   return (
    
     <div className="flex flex-col p-4 gap-y-4">
-     <p> Logged in as {session.user.name}</p>
+     <p> Logged in as {session.user?.name}</p>
      <Button onClick={() => authClient.signOut()}>Sign out</Button>
       </div>
   )
